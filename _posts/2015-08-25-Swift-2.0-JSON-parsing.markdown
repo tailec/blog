@@ -1,0 +1,65 @@
+---
+layout: post
+title:  "Swift 2.0 JSON parsing"
+date:   2015-10-25 21:24:00
+categories: swift
+comments: true
+---
+Recently, I've started learning Swift and bumped into problem with JSON parsing. I wrote something simple but it wasn't perfect so I put my code
+at [codereviews](http://codereview.stackexchange.com/questions/101832/building-weather-forecast-from-json-with-optionals).
+
+I received excellent answer and decided to beatify this a little bit.
+
+Let's say we have JSON and *summary* field can be optional.
+
+    {
+      "latitude": 37.8267,
+      "longitude": -122.423,
+      "currently": {
+        "time": 1440110395,
+        "summary": "Clear" // sometimes present in response, sometimes not
+      }
+    }
+
+
+And model object
+
+
+    enum JSONParsingError: ErrorType {
+      case RequiredKeyNotFound
+    }
+
+    struct WeatherForecast {
+      typealias Location = Double
+
+      let date: NSDate
+      let summary: String?
+      let latitude: Location
+      let longitude: Location
+
+      init(date: NSDate, summary: String?, latitude: Location, longitude: Location) {
+        self.latitude = latitude
+        self.longitude = longitude
+        self.date = date
+        self.summary = summary
+      }
+
+      static func fromJSON(json: AnyObject) throws -> WeatherForecast {
+        guard let dict = json as? [String : AnyObject],
+          let latitude = dict["latitude"] as? Location,
+          let longitude = dict["longitude"] as? Location,
+          let curr_dict = dict["currently"] as? [String : AnyObject],
+          let timestamp = curr_dict["time"] as? NSTimeInterval else {
+            throw JSONParsingError.RequiredKeyNotFound
+        }
+        let date = NSDate(timeIntervalSince1970: timestamp)
+        let summary = curr_dict["summary"] as? String
+        return WeatherForecast(date: date, summary: summary, latitude: latitude, longitude: longitude)
+      }
+    }
+
+In the snippet above *guard* is checking if our required keys are present in the response. Otherwise it throws an error.
+
+Also it's really cool that it unwraps optionals (produced by downcasting) so we can use them in scope of the method.
+
+*summary* is marked as optional *String* so it passes *nil* when key doesn't exist in JSON.  

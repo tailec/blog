@@ -1,0 +1,19 @@
+# Site settings
+title: tailec
+metatitle: tailec - Pawel Krawiec iOS blog
+description: > # this means to ignore newlines until "baseurl:"
+  Personal corner about iOS. iOS consulting, contracts available.
+baseurl: ""
+url:  "http://www.tailec.com"
+
+# Custom variables
+email: pawel@tailec.com
+twitter_user: tailectailec
+github_user:  tailec
+skype_user: krawiec_pawel
+linkedin_user: pawelkrawiec
+
+# Build settings
+sass:
+    sass_dir: _sass
+permalink: /blog/:title

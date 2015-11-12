@@ -1,0 +1,320 @@
+.highlight {
+  padding: 0.3em;
+  margin-bottom: $paragraph-margin-bottom;
+  overflow: auto;
+  line-height: $paragraph-line-height;
+  background: $base2;
+  @media #{$medium-up} {
+    max-height: 10 * $paragraph-line-height * 1em;
+  }
+
+  pre {
+    margin: 0;
+    padding: 0;
+  }
+
+  // Comment
+  .c {
+    color: $base1;
+    font-style: italic;
+  }
+
+  // Error
+  .err {
+    color: $red;
+    background-color: #e3d2d2;
+  }
+
+  // Keyword
+  .k {
+    font-weight: bold;
+  }
+
+  // Operator
+  .o {
+    font-weight: bold;
+  }
+
+  // Comment.Multiline
+  .cm {
+    color: $base1;
+    font-style: italic;
+  }
+
+  // Comment.Preproc
+  .cp {
+    color: $base1;
+    font-weight: bold;
+  }
+
+  // Comment.Single
+  .c1 {
+    color: $base1;
+    font-style: italic;
+  }
+
+  // Comment.Special
+  .cs {
+    color: $base1;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  // Generic.Deleted
+  .gd {
+    color: $base01;
+    background-color: #ffdddd;
+
+    // Generic.Deleted.Specific
+    .x {
+      color: $base01;
+      background-color: #ffaaaa;
+    }
+  }
+
+  // Generic.Emph
+  .ge {
+    font-style: italic;
+  }
+
+  // Generic.Error
+  .gr {
+    color: $red;
+  }
+
+  // Generic.Heading
+  .gh {
+    color: #999999;
+  }
+
+  // Generic.Inserted
+  .gi {
+    color: $base01;
+    background-color: $base3;
+
+    // Generic.Inserted.Specific
+    .x {
+      color: $base01;
+      background-color: $base3;
+    }
+  }
+
+  // Generic.Output
+  .go {
+    color: $base0;
+  }
+
+  // Generic.Prompt
+  .gp {
+    color: $base02;
+  }
+
+  // Generic.Strong
+  .gs {
+    font-weight: bold;
+  }
+
+  // Generic.Subheading
+  .gu {
+    color: $base00;
+  }
+
+  // Generic.Traceback
+  .gt {
+    color: $red;
+  }
+
+  // Keyword.Constant
+  .kc {
+    font-weight: bold;
+  }
+
+  // Keyword.Declaration
+  .kd {
+    font-weight: bold;
+  }
+
+  // Keyword.Pseudo
+  .kp {
+    font-weight: bold;
+  }
+
+  // Keyword.Reserved
+  .kr {
+    font-weight: bold;
+  }
+
+  // Keyword.Type
+  .kt {
+    color: $violet;
+    font-weight: bold;
+  }
+
+  // Literal.Number
+  .m {
+    color: $blue;
+  }
+
+  // Literal.String
+  .s {
+    color: $cyan;
+  }
+
+  // Name.Attribute
+  .na {
+    color: $cyan;
+  }
+
+  // Name.Builtin
+  .nb {
+    color: $cyan;
+  }
+
+  // Name.Class
+  .nc {
+    color: $violet;
+    font-weight: bold;
+  }
+
+  // Name.Constant
+  .no {
+    color: $cyan;
+  }
+
+  // Name.Entity
+  .ni {
+    color: $red;
+  }
+
+  // Name.Exception
+  .ne {
+    color: $red;
+    font-weight: bold;
+  }
+
+  // Name.Function
+  .nf {
+    color: $red;
+    font-weight: bold;
+  }
+
+  // Name.Namespace
+  .nn {
+    color: $violet;
+  }
+
+  // Name.Tag
+  .nt {
+    color: $blue;
+  }
+
+  // Name.Variable
+  .nv {
+    color: $cyan;
+  }
+
+  // Operator.Word
+  .ow {
+    font-weight: bold;
+  }
+
+  // Literal.Number.Float
+  .mf {
+    color: $blue;
+  }
+
+  // Literal.Number.Hex
+  .mh {
+    color: $blue;
+  }
+
+  // Literal.Number.Integer
+  .mi {
+    color: $blue;
+  }
+
+  // Literal.Number.Oct
+  .mo {
+    color: $blue;
+  }
+
+  // Literal.String.Backtick
+  .sb {
+    color: $cyan;
+  }
+
+  // Literal.String.Char
+  .sc {
+    color: $cyan;
+  }
+
+  // Literal.String.Doc
+  .sd {
+    color: $cyan;
+  }
+
+  // Literal.String.Double
+  .s2 {
+    color: $cyan;
+  }
+
+  // Literal.String.Escape
+  .se {
+    color: $cyan;
+  }
+
+  // Literal.String.Heredoc
+  .sh {
+    color: $cyan;
+  }
+
+  // Literal.String.Interpol
+  .si {
+    color: $cyan;
+  }
+
+  // Literal.String.Other
+  .sx {
+    color: $cyan;
+  }
+
+  // Literal.String.Regex
+  .sr {
+    color: $green;
+  }
+
+  // Literal.String.Single
+  .s1 {
+    color: $cyan;
+  }
+
+  // Literal.String.Symbol
+  .ss {
+    color: $red;
+  }
+
+  // Name.Builtin.Pseudo
+  .bp {
+    color: $base00;
+  }
+
+  // Name.Variable.Class
+  .vc {
+    color: $cyan;
+  }
+
+  // Name.Variable.Global
+  .vg {
+    color: $cyan;
+  }
+
+  // Name.Variable.Instance
+  .vi {
+    color: $green;
+  }
+
+  // Literal.Number.Integer.Long
+  .il {
+    color: $red;
+  }
+}

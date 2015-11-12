@@ -1,0 +1,206 @@
+$lightgrey: #3A4145;
+$grey: #4A4A4A;
+$greyish: #9A9A9A;
+
+html {
+    overflow-y: scroll;
+}
+
+p {
+    color: $grey-color-dark;
+    font-family: 'Open Sans', sans-serif;
+
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+.page {
+    h1,h2,h3 {
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+        color: $grey;
+    }
+    p {
+      font-weight: 300;
+    }
+}
+
+.bar-margin {
+    padding-top: 2rem;
+}
+
+.highlight {
+    color: red;
+}
+/* HEADER */
+
+.site-header {
+	  border-top: 5px solid $grey;
+    border-bottom: 1px solid $grey-color-light;
+    min-height: 56px;
+    margin-bottom:10px;
+}
+.site-title {
+    font-weight: 300;
+    color: $greyish;
+    font-size: 26px;
+    line-height: 56px;
+    margin-bottom: 0;
+    float: left;
+    &,
+    &:visited {
+        color: $grey-color-dark;
+    }
+   }
+
+.site-nav {
+    line-height: 56px;
+    float:right;
+    .page-link {
+        line-height: $base-line-height;
+        font-weight: 300;
+        color: $greyish;
+        // Gaps between nav items, but not on the first one
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+}
+/*
+POST
+*/
+
+.post {
+    padding-right:20%;
+    margin-bottom:2rem;
+
+    a {
+        text-decoration: underline;
+        color: $grey-color-dark;
+    }
+
+    .post-meta {
+        font-style: italic;
+    }
+    h1 {
+      font-family: 'Open Sans', sans-serif;
+
+      font-weight: 400;
+      color: $grey;
+      font-size: 36px;
+    }
+    .post-content {
+        color: $lightgrey;
+        font-weight: 300;
+        font-size: 18px;
+    }
+
+}
+.postmain:last-child > hr {
+  display: none;
+}
+.postmain {
+
+    padding-right:20%;
+    margin-bottom:2rem;
+    a {
+        text-decoration: none;
+        color: $grey-color-dark;
+    }
+    h2 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      color: $grey;
+      font-size: 36px;
+    }
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      color: $lightgrey;
+      font-size: 18px;
+    }
+
+    hr {
+      display: block;
+      padding-top: 18px;
+
+    }
+
+    .post-meta {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        padding-bottom: 18px;
+        color: #9A9A9A;
+        font-size: 13px;
+    }
+    .post-title h1 {
+      font-family: 'Open Sans', sans-serif;
+
+    }
+    .post-content {
+        color: $lightgrey;
+    }
+
+}
+/*
+FOOTER
+*/
+.footer {
+  margin-top:20px;
+border-top: 1px solid $grey-color-light;
+
+    p {
+      font-weight: 300;
+      color: $lightgrey;
+      font-size:80%;
+      padding: 1rem;
+    }
+    .social-icons {
+      padding-bottom: 5rem;
+      opacity: 0.4;
+      display: inline;
+
+      a:hover {
+        opacity: 0.7;
+      }
+    }
+}
+
+/*
+CONTACT
+*/
+.email {
+    font-size: 300%;
+    text-align: center;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  .email {
+      font-size: 200%;
+  }
+}
+
+/*
+SIDEBAR
+*/
+.sidebar {
+    h1,h2,h3 {
+        padding: 0;
+        margin: 0;
+        color: $grey-color-dark;
+    }
+    .social-icons {
+        display: inline;
+
+        a:link {
+        opacity: 0.4;
+        }
+
+        a:hover {
+        opacity:0.2;
+        }
+    }
+}
