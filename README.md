@@ -20,7 +20,12 @@ JEKYLL_ENV=production jekyll b -c _config.yml,_keys.yml
 ```
 
 ## Special thanks
-
+This website was created with help of: 
 [jekyll](https://github.com/jekyll/jekyll)
+
 [bootstrap](https://github.com/twbs/bootstrap)
+
 [glynn](https://github.com/dmathieu/glynn)
+
+## Licence
+Copyright by [tailec](www.tailec.com) under [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/)
