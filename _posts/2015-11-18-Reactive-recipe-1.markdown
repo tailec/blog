@@ -81,9 +81,11 @@ type in `viewDidLoad()` method. They return `bool` value depending on validation
 
 Let's test above the code and try to type something in username text field:
 
-    validUsernameObservable.subscribeNext { value in
-        print(value)
-    }
+    _ = validUsernameObservable
+        .subscribeNext { value in
+            print(value)
+        }
+        .addDisposableTo(disposeBag)
     // prints:
     // false
     // true
@@ -98,6 +100,7 @@ Or test it visually:
     .subscribeNext { color in
         self.usernameTextField.backgroundColor = color
     }
+    .addDisposableTo(disposeBag)
 
 That's it, the username text field is highlighted green when username is valid.
 
@@ -108,6 +111,8 @@ new thing in RxSwift - read more [here](https://github.com/ReactiveX/RxSwift/blo
     combineLatest(validUsernameObservable, validPasswordObservable) { usernameValid, passwordValid in
         return usernameValid && passwordValid
     }.bindTo(loginButton.rx_enabled)
+    .addDisposableTo(disposeBag)
+
 
 Now, we just need to wrap Parse network request method into `Observable`.
 
@@ -140,6 +145,13 @@ within another `Observable`).
        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
        self.presentViewController(alert, animated: true, completion: nil)
     }
+    .addDisposableTo(disposeBag)
 
 
 If you got lost along the way, you can look at my code in **[GitHub](https://github.com/tailec/reactive-recipes)**.
+
+
+**UPDATE:**
+[carlosypunto](https://github.com/carlosypunto) suggested using [DisposableBags](https://github.com/ReactiveX/RxSwift/blob/master/Documentation/GettingStarted.md#disposing)
+and made sequences flow more attractive.
+You can see changes in this [commit](https://github.com/tailec/reactive-recipes/commit/8c9c4ca92d6b98dd5cffc4c99154bd07ab527df4).
