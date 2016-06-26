@@ -5,6 +5,7 @@ date:   2016-06-27 18:01:34
 categories: swift
 comments: true
 ---
+
 In this article, I aim to explain Publish, Connect, RefCount and Share operators
 using RxSwift.
 
