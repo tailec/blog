@@ -8,11 +8,11 @@ comments: true
 
 Someone told me recently,
 
-_"In read world, view models should work even if you remove user input"_
+> In read world, view models should work even if you remove user input.
 
 and it gave me an idea of transferring my view models from iOS app to Mac app.
 
-The apps are performing github repositories search based on query provided by
+The both apps are performing github repositories search, based on query provided by
 user.
 
 They have only one view model, one model object representing *Repository* and
